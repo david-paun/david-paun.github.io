@@ -1,0 +1,488 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    @font-face {
+        font-family: 'milkyCoffee';
+        src: url('milky_coffee-webfont.woff2') format('woff2'),
+        url('milky_coffee-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+
+    h2, button {
+        font-family: milkyCoffee;
+    }
+
+
+    #main{
+        overflow-x: hidden;
+        @apply bg-background;
+        @apply text-text;
+
+        @apply s:w-screen;
+        @apply s:min-h-screen;
+
+        @apply flex;
+        @apply flex-wrap;
+        @apply items-center;
+        @apply justify-center;
+    }
+
+
+
+    #easter-egg a{
+        @apply block;
+        @apply absolute;
+        @apply w-[50px];
+        @apply h-[100px];
+    }
+
+    #carrot-wrapper{
+        @apply m:w-[600px];
+        @apply m:h-[600px];
+        @apply m:absolute;
+        @apply m:left-[50%];
+        @apply m:translate-x-[-50%];
+
+        @apply l:w-[300px];
+        @apply l:h-[300px];
+        @apply l:relative;
+        @apply l:left-0;
+        @apply l:translate-x-[0];
+    }
+
+    .main-left-picture-all{
+        overflow: hidden;
+
+        @apply s:hidden;
+        @apply m:block;
+        @apply l:block;
+        @apply x:block;
+
+        @apply s:w-0;
+        @apply m:w-screen;
+        @apply l:w-[460px];
+        @apply x:w-[580px];
+
+        @apply s:h-0;
+        @apply m:h-[600px];
+        @apply l:h-[700px];
+        @apply x:h-[800px];
+
+        @apply x:bg-[url('bunny-scaled.png')];
+        @apply l:bg-[url('bunny-scaled.png')];
+        @apply m:bg-[url('bunny-scaled.png')];
+
+        @apply bg-contain;
+        @apply bg-no-repeat;
+
+        @apply m:bg-center;
+        @apply l:bg-right;
+
+        @apply m:mt-[25px];
+        @apply m:mb-[15px];
+
+        @apply l:mt-0;
+        @apply l:mb-0;
+    }
+
+
+
+    .main-right-content-all{
+        overflow: hidden;
+        font-family: Quicksand, sans-serif;
+
+        @apply l:pl-[20px];
+        @apply l:pr-[3px];
+
+        @apply x:pl-[10px];
+        @apply x:pr-[50px];
+
+
+        @apply s:block;
+        @apply m:block;
+        @apply l:block;
+        @apply x:block;
+
+        @apply s:w-[600px];
+        @apply m:w-[600px];
+        @apply l:w-[600px];
+        @apply x:w-[800px];
+
+        @apply s:h-auto;
+        @apply m:h-auto;
+        @apply l:h-auto;
+        @apply x:h-auto;
+
+        @apply text-center;
+        @apply justify-center;
+
+        @apply m:mb-[20px];
+        @apply l:mb-0;
+
+        @apply m:mt-[30px];
+        @apply l:mt-0;
+    }
+
+
+  .divider{
+      @apply s:w-[50%];
+
+      @apply s:mt-[22px];
+      @apply s:mr-0;
+      @apply s:mb-[22px];
+      @apply s:ml-[25%];
+
+      @apply m:w-[40%];
+
+      @apply m:mt-[10px];
+      @apply m:mr-0;
+      @apply m:mb-[22px];
+      @apply m:ml-[30%];
+
+      @apply l:w-[36%];
+
+      @apply l:mt-[20px];
+      @apply l:mr-0;
+      @apply l:mb-[22px];
+      @apply l:ml-[32%];
+
+      @apply x:w-[38%];
+
+      @apply x:mt-[25px];
+      @apply x:mr-0;
+      @apply x:mb-[35px];
+      @apply x:ml-[31%];
+
+  }
+
+    #welcome-to{
+        @apply s:text-[80px];
+
+        @apply l:text-[54px];
+
+        @apply x:text-[72px];
+    }
+
+    #snow-illustrates{
+        @apply s:text-[64px];
+
+        @apply l:text-[43px];
+
+        @apply x:text-[58px];
+    }
+
+    #hi{
+        @apply s:text-[32px];
+        @apply s:mb-[10px];
+
+        @apply m:text-[28px];
+
+        @apply l:text-[26px];
+
+        @apply x:text-[30px];
+
+        @apply x:mt-[-20px];
+    }
+
+    #para-1{
+        @apply s:text-[26px];
+        @apply s:mb-[14px];
+
+        @apply m:text-[25px];
+
+        @apply l:text-[22px];
+        @apply l:leading-[30px];
+
+        @apply x:text-[24px];
+        @apply x:leading-[33px];
+    }
+
+    #para-2{
+        @apply s:text-[26px];
+        @apply s:mb-[30px];
+
+        @apply m:text-[25px];
+
+        @apply l:text-[22px];
+        @apply l:leading-[30px];
+
+        @apply l:mb-[35px];
+
+        @apply x:text-[24px];
+        @apply x:leading-[33px];
+
+        @apply x:mb-[40px];
+
+    }
+
+    #contact{
+        background-image: url("Pictures/contact me png.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @apply s:w-[225px];
+        @apply s:h-[75px];
+        @apply s:mt-[10px];
+
+        @apply m:w-[210px];
+        @apply m:h-[70px];
+        @apply m:mt-[10px];
+
+        @apply l:w-[175px];
+        @apply l:h-[55px];
+        @apply l:mt-[15px];
+
+        @apply x:w-[200px];
+        @apply x:h-[66px];
+        @apply x:mt-[5px];
+
+        @apply relative;
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #upwork{
+        background-image: url("Pictures/upwork png.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        @apply s:w-[90px];
+        @apply s:h-[90px];
+        @apply s:mt-[15px];
+        @apply s:mr-[10px];
+
+        @apply m:w-[80px];
+        @apply m:h-[80px];
+        @apply m:mt-[10px];
+        @apply m:mr-[5px];
+
+        @apply l:w-[65px];
+        @apply l:h-[65px];
+        @apply l:mt-[10px];
+        @apply l:mr-[5px];
+
+        @apply x:w-[75px];
+        @apply x:h-[75px];
+        @apply x:mt-[10px];
+        @apply x:mr-[5px];
+    }
+
+    #instagram{
+        background-image: url("Pictures/insta png.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        @apply s:w-[90px];
+        @apply s:h-[90px];
+        @apply s:mt-[15px];
+        @apply s:mr-[10px];
+
+        @apply m:w-[80px];
+        @apply m:h-[80px];
+        @apply m:mt-[10px];
+        @apply m:mr-[5px];
+
+        @apply l:w-[65px];
+        @apply l:h-[65px];
+        @apply l:mt-[10px];
+        @apply l:mr-[5px];
+
+        @apply x:w-[75px];
+        @apply x:h-[75px];
+        @apply x:mt-[10px];
+        @apply x:mr-[5px];
+    }
+
+    #fiver{
+        background-image: url("Pictures/fiverr png.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        @apply s:w-[90px];
+        @apply s:h-[90px];
+        @apply s:mt-[15px];
+        @apply s:mr-[10px];
+
+        @apply m:w-[80px];
+        @apply m:h-[80px];
+        @apply m:mt-[10px];
+        @apply m:mr-[5px];
+
+        @apply l:w-[65px];
+        @apply l:h-[65px];
+        @apply l:mt-[10px];
+        @apply l:mr-[5px];
+
+        @apply x:w-[75px];
+        @apply x:h-[75px];
+        @apply x:mt-[10px];
+        @apply x:mr-[5px];
+    }
+
+    #tee{
+        background-image: url("Pictures/teespring png.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        @apply s:w-[90px];
+        @apply s:h-[90px];
+        @apply s:mt-[15px];
+
+        @apply m:w-[80px];
+        @apply m:h-[80px];
+        @apply m:mt-[10px];
+
+        @apply l:w-[65px];
+        @apply l:h-[65px];
+        @apply l:mt-[10px];
+
+        @apply x:w-[75px];
+        @apply x:h-[75px];
+        @apply x:mt-[10px];
+    }
+
+
+
+    .button {
+        @apply relative;
+        @apply block;
+        @apply w-[100%];
+        @apply h-[100%];
+
+        border-radius: 30px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+        height: 100vh;
+        z-index: 99;
+    }
+
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .popup {
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup .close {
+        position: absolute;
+        transition: all 200ms;
+        font-weight: bold;
+        text-decoration: none;
+        color: red;
+        height: 20px;
+        width: 20px;
+        top: 20px;
+        right: 40px;
+        font-size: 50px;
+        z-index: 2;
+    }
+
+    .popup .close-fs {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .close:hover {
+        color: #06D85F;
+    }
+
+    .content {
+        background-image: url("Pictures/pop-up.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        height: 560px;
+    }
+
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    button:hover {
+        animation: shake 0.45s;
+        animation-iteration-count: 1;
+    }
+
+    #carrot{
+        @apply bg-contain;
+        @apply relative;
+        background-image: url("Pictures/carrot.png");
+
+        @apply s:w-[80px];
+        @apply s:h-[80px];
+        @apply s:mt-[100px];
+        @apply s:ml-[100px];
+
+        @apply m:w-[170px];
+        @apply m:h-[170px];
+        @apply m:mt-[465px];
+        @apply m:ml-[340px];
+
+        @apply l:w-[200px];
+        @apply l:h-[200px];
+        @apply l:mt-[545px];
+        @apply l:ml-[265px];
+
+        @apply x:w-[230px];
+        @apply x:h-[230px];
+        @apply x:mt-[620px];
+        @apply x:ml-[360px];
+
+    }
+
+    #carrot-small{
+        @apply bg-contain;
+        @apply relative;
+        background-image: url("Pictures/carrot.png");
+
+        @apply s:w-[250px];
+        @apply s:h-[250px];
+        @apply s:ml-[200px];
+        @apply s:mb-[-60px];
+
+        @apply m:hidden;
+    }
+}
